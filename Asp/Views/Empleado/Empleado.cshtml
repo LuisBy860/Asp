@@ -1,0 +1,44 @@
+﻿@model List<Asp.Models.Empleado>
+@{
+    ViewBag.Title = "Empleado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Empleado</h2>
+
+
+<table class="table table-hover">
+    <thead>
+    <th>
+        Nombre
+
+    </th>
+    <th>
+        Direccion
+
+    </th>
+
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Direccion</td>
+
+            </tr>
+
+
+
+        }
+
+
+
+
+    </tbody>
+
+
+
+</table>
