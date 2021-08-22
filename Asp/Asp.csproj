@@ -212,6 +212,7 @@
     <Content Include="Views\Persona\Humano.cshtml" />
     <Content Include="Views\Persona\VistaListadoPersona.cshtml" />
     <Content Include="Views\Empleado\Empleado.cshtml" />
+    <Content Include="Views\Empleado\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

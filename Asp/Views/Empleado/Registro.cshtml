@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewBag.EnviandoDatosRegistro</h1>
+<h2>Registro</h2>
+
+@using (Html.BeginForm("save", "Empleado", FormMethod.Post))
+{ 
+
+<label for="nombre">Ingresa tu nombre</label>
+        <br>
+        <input type="text" name="nombre">
+        <br>
+        <label for="apellido">ingresa tu apellido</label>
+        <br>
+        <input type="text" name="apellido">
+        <br>
+        <label for="dui">ingrese su dui</label>
+        <br>
+        <input type="number" name="dui">
+        <br>
+        <label for="direccion">ingresa tu direccion </label>
+        <br>
+        <input type="text" name="direccion">
+        <br>
+        <label for="telefono">ingresa tu telefono</label>
+        <br>
+        <input type="number" name="telefono">
+        <br>
+        <label for="correo">ingresa tu correo</label>
+        <br>
+        <input type="text" name="correo">
+        <br>
+        <label for="cargo">ingresa tu cargo</label>
+        <br>
+        <input type="text" name="cargo">
+
+        <input type="submit"/>
+
+        }
