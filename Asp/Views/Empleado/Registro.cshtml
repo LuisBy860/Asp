@@ -1,17 +1,16 @@
-﻿
-@{
-    ViewBag.Title = "Registro";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<h1>@ViewBag.EnviandoDatosRegistro</h1>
-<h2>Registro</h2>
+﻿    
+    @{
+        ViewBag.Title = "Registro";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    <h1>@ViewBag.EnviandoDatosRegistro</h1>
+    <h2>Registro</h2>
 
-@using (Html.BeginForm("save", "Empleado", FormMethod.Post))
-{ 
-
-<label for="nombre">Ingresa tu nombre</label>
+    @using (Html.BeginForm("save", "Empleado", FormMethod.Post))
+    {
+        <label for="nombre">Ingresa tu nombre</label>
         <br>
-        <input type="text" name="nombre">
+        <input type="text" name="nombre" value="@ViewBag.EnviandoNombre">
         <br>
         <label for="apellido">ingresa tu apellido</label>
         <br>
@@ -37,6 +36,6 @@
         <br>
         <input type="text" name="cargo">
 
-        <input type="submit"/>
+        <input type="submit" />
 
-        }
+    }

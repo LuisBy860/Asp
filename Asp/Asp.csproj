@@ -154,6 +154,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Empleado.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\PersonaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +214,10 @@
     <Content Include="Views\Persona\VistaListadoPersona.cshtml" />
     <Content Include="Views\Empleado\Empleado.cshtml" />
     <Content Include="Views\Empleado\Registro.cshtml" />
+    <Content Include="Views\Persona\PersonaViewModel.cshtml" />
+    <Content Include="Views\Persona\Registros.cshtml" />
+    <Content Include="Views\Persona\CajeroViewModel.cshtml" />
+    <Content Include="Views\Persona\ErrorViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

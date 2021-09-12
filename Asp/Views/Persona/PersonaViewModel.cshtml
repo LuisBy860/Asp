@@ -1,0 +1,27 @@
+﻿@model Asp.Models.ViewModels.PersonaViewModel
+@{
+    ViewBag.Title = "PersonaViewModel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PersonaViewModel</h2>
+@using (Html.BeginForm("PersonaViewModels", "Persona", FormMethod.Post))
+{
+
+
+    @Html.LabelFor(m => m.Monto)
+    <br />
+    @Html.TextBoxFor(m => m.Monto,new  {type ="number" })
+    <br />
+    @Html.ValidationMessageFor(m => m.Monto, null)
+    <br />
+
+
+    @Html.LabelFor(m => m.Nombre)
+    <br />
+    @Html.TextBoxFor(m => m.Nombre)
+    <br />
+    @Html.ValidationMessageFor(m => m.Nombre, null)
+    <br />
+    <input type="submit" />
+}

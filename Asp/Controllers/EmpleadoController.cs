@@ -21,15 +21,29 @@ namespace Asp.Controllers
                 return View(ListadoEmpleado);
             }
         }
-        public ActionResult save(string nombre, string direccion)
+        public ActionResult save(String id, string nombre, string direccion )
         {
             using (EmpleadoEntities bd = new EmpleadoEntities())
             {
-                Empleado emp = new Empleado();
-                emp.Nombre = nombre;
-                emp.Direccion = direccion;
-                bd.Empleado.Add(emp); //este es como la funcion agregar de un crud 
-                bd.SaveChanges();//con esto la base de datos reconoce los datos ingresados 
+                if (id == null|| id.Equals("") || id == "0")
+                {
+
+
+                    Empleado emp = new Empleado();
+                    emp.Nombre = nombre;
+                    emp.Direccion = direccion;
+                    bd.Empleado.Add(emp); //este es como la funcion agregar de un crud 
+                    bd.SaveChanges();//con esto la base de datos reconoce los datos ingresados 
+                }
+                else
+                {
+                    int idupdate = Convert.ToInt32(id);
+                    //estrutura de exprecion lambda
+                    Empleado editar = bd.Empleado.Where(e => e.IdEmpleado == idupdate).FirstOrDefault();
+                    editar.Nombre = nombre;
+                    bd.SaveChanges();
+                }
+
 
                 return Redirect("/Empleado/Empleado"); //si hago un rediccionamiento  cuando colocamos un viewbag no lo va cargar
             }
@@ -37,9 +51,12 @@ namespace Asp.Controllers
 
 
         }
-        public ActionResult Registro()
+        public ActionResult Registro(String id,String nombre)
         {
-            string nombre = "Luis";
+            ViewBag.idenviado = id;
+
+
+            
             ViewBag.EnviandoDatosRegistro = nombre;
             return View();
            

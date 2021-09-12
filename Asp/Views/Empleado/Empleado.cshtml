@@ -22,6 +22,7 @@
     </thead>
 
     <tbody>
+
         @foreach (var item in Model)
         {
             <tr>
@@ -29,9 +30,9 @@
                 <td>@item.Nombre</td>
                 <td>@item.Direccion</td>
                 <td>
-                    @Html.ActionLink("Eliminar","Delete", new { id = item.IdEmpleado }, new { @class = "btn btn-danger" });  @*esto como que nostros tengamos la etiqueta <a></a>de html pero ubicada acada en razor la cual sirve para hacer una peticion*@
-                
-                
+                    @Html.ActionLink("Eliminar","Delete", new { id = item.IdEmpleado }, new { @class = "btn btn-danger" }); 
+                 
+
                 </td>
 
             </tr>
